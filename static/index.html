@@ -37,6 +37,9 @@
 
   </div>
 
+  <!-- Script para carregar os ícones do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
     // Função para adicionar um nome à lista
     function adicionarNome() {
@@ -47,9 +50,26 @@
         const li = document.createElement("li");
         li.classList.add("list-group-item");
         li.textContent = nome;
+
+        // Adiciona o ícone de lata de lixo ao lado do nome
+        const trashIcon = document.createElement("span");
+        trashIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M10.5 1a.5.5 0 0 1 .5.5V2h3a.5.5 0 0 1 0 1H13v11.5a.5.5 0 0 1-1 0V3H9v1.5a.5.5 0 0 1-1 0V3H5.5a.5.5 0 0 1 0-1h3V1.5a.5.5 0 0 1 .5-.5zM4 4v10.5a.5.5 0 0 1-1 0V4a.5.5 0 0 1 1 0zm3 0v10.5a.5.5 0 0 1-1 0V4a.5.5 0 0 1 1 0zm4 0v10.5a.5.5 0 0 1-1 0V4a.5.5 0 0 1 1 0z"/></svg>';
+        trashIcon.classList.add("float-end");
+        trashIcon.style.cursor = "pointer";
+        trashIcon.onclick = function() {
+          deletarNome(this);
+        };
+
+        li.appendChild(trashIcon);
         listaNomes.appendChild(li);
         nomeInput.value = "";
       }
+    }
+
+    // Função para deletar um nome da lista
+    function deletarNome(spanElement) {
+      const liElement = spanElement.parentElement;
+      liElement.remove();
     }
 
     // Função para atualizar a lista de nomes do arquivo CSV
@@ -61,6 +81,17 @@
         const li = document.createElement("li");
         li.classList.add("list-group-item");
         li.textContent = nome;
+
+        // Adiciona o ícone de lata de lixo ao lado do nome
+        const trashIcon = document.createElement("span");
+        trashIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M10.5 1a.5.5 0 0 1 .5.5V2h3a.5.5 0 0 1 0 1H13v11.5a.5.5 0 0 1-1 0V3H9v1.5a.5.5 0 0 1-1 0V3H5.5a.5.5 0 0 1 0-1h3V1.5a.5.5 0 0 1 .5-.5zM4 4v10.5a.5.5 0 0 1-1 0V4a.5.5 0 0 1 1 0zm3 0v10.5a.5.5 0 0 1-1 0V4a.5.5 0 0 1 1 0zm4 0v10.5a.5.5 0 0 1-1 0V4a.5.5 0 0 1 1 0z"/></svg>';
+        trashIcon.classList.add("float-end");
+        trashIcon.style.cursor = "pointer";
+        trashIcon.onclick = function() {
+          deletarNome(this);
+        };
+
+        li.appendChild(trashIcon);
         listaNomes.appendChild(li);
       });
     }
@@ -95,6 +126,13 @@
       if (event.keyCode === 13) {
         adicionarNome();
       }
+    }
+
+    // Função para buscar os nomes na web
+    function buscarWeb() {
+      const listaNomes = document.getElementById("nomesLista");
+      const nomes = Array.from(listaNomes.children).map(li => li.textContent.trim());
+      buscarNomesNaWeb(nomes);
     }
   </script>
 </body>
