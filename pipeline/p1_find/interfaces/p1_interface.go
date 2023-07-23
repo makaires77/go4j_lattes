@@ -1,6 +1,7 @@
 package interfaces
 
 import (
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/application"
 	"github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
 )
 
@@ -16,5 +17,5 @@ type P1Interface interface {
 	GetSelectedName(results domain.SearchResults) string
 
 	// FindResearchers realiza a busca de pesquisadores utilizando os handlers e interfaces fornecidos.
-	FindResearchers(csvHandler CSVHandler, queueHandler QueueHandler, searchHandler SearchHandler, webInterface P1WebInterface) (domain.SearchResults, error)
+	FindResearchers(csvHandler application.CSVHandler, queueHandler application.QueueHandler, searchHandler application.SearchHandler, webInterface P1Web) (domain.SearchResults, error)
 }
