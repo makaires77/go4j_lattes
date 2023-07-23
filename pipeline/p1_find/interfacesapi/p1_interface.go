@@ -1,11 +1,21 @@
 package interfacesapi
 
-import (
-	"github.com/makaires77/go4j_lattes/pipeline/p1_find/application"
-	"github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
-)
+import "github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
 
-// Adicione esta importação
+// CSVHandler define os métodos para lidar com o arquivo CSV.
+type CSVHandler interface {
+	// Métodos do CSVHandler aqui...
+}
+
+// QueueHandler define os métodos para lidar com a fila de pesquisadores.
+type QueueHandler interface {
+	// Métodos do QueueHandler aqui...
+}
+
+// SearchHandler define os métodos para lidar com a busca de pesquisadores.
+type SearchHandler interface {
+	// Métodos do SearchHandler aqui...
+}
 
 // P1Interface define os métodos que a camada de aplicação irá chamar para interagir com a camada de interfaces.
 type P1Interface interface {
@@ -19,5 +29,5 @@ type P1Interface interface {
 	GetSelectedName(results domain.SearchResults) string
 
 	// FindResearchers realiza a busca de pesquisadores utilizando os handlers e interfaces fornecidos.
-	FindResearchers(csvHandler *application.CSVHandler, queueHandler *application.QueueHandler, searchHandler *application.SearchHandler, webInterface *application.P1Interface) (domain.SearchResults, error) // Corrija os tipos aqui
+	FindResearchers(csvHandler CSVHandler, queueHandler QueueHandler, searchHandler SearchHandler) (domain.SearchResults, error)
 }
