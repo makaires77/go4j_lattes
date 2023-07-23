@@ -1,4 +1,4 @@
-package interfaces
+package application
 
 import "github.com/makaires77/go4j_lattes/pipeline/p1_find/interfacesapi"
 
