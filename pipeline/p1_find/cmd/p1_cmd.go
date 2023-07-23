@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/your-user/go4j_lattes/pipeline/p1_find/application"
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/application"
 )
 
 // P1Cmd é responsável por gerenciar a execução do processo de busca dos currículos.

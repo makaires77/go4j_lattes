@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/your-user/go4j_lattes/pipeline/p1_find/domain"
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
 )
 
 // P1Web é a implementação da interface P1Interface para interação com o usuário via CLI.

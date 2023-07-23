@@ -3,10 +3,10 @@ package tests
 import (
 	"testing"
 
-	"github.com/your-user/go4j_lattes/pipeline/p1_find/application"
-	"github.com/your-user/go4j_lattes/pipeline/p1_find/domain"
-	"github.com/your-user/go4j_lattes/pipeline/p1_find/infra"
-	"github.com/your-user/go4j_lattes/pipeline/p1_find/interfaces"
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/application"
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/infra"
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/interfaces"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -15,11 +15,11 @@ func TestP1(t *testing.T) {
 	// Simulando resultados da busca
 	results := domain.SearchResults{
 		{
-			Name: "Pesquisador 1",
+			Name: "Raimir Holanda Filho",
 			// Adicione outros campos que você queira simular
 		},
 		{
-			Name: "Pesquisador 2",
+			Name: "Nabor das Chagas Mendonça",
 			// Adicione outros campos que você queira simular
 		},
 		// Adicione mais resultados simulados conforme necessário

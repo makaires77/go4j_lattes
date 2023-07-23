@@ -1,6 +1,6 @@
 package interfaces
 
-import "github.com/your-user/go4j_lattes/pipeline/p1_find/domain"
+import "github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
 
 // P1Interface define os métodos que a camada de aplicação irá chamar para interagir com a camada de interfaces.
 type P1Interface interface {

@@ -3,7 +3,7 @@ package infra
 import (
 	"fmt"
 
-	"github.com/your-user/go4j_lattes/pipeline/p1_find/domain"
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
 )
 
 // P1Infra é responsável por interagir com a infraestrutura para armazenar os dados dos currículos.
