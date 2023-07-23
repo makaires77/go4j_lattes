@@ -1,0 +1,31 @@
+# Ignore arquivos e diretórios específicos
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.log
+*.svg
+*.css.map
+*.js.map
+
+# Ignore diretórios específicos
+node_modules/
+dist/
+build/
+.vscode/
+.idea/
+
+# Ignore arquivos de configuração
+*.env
+.env.*
+*.DS_Store
+*.bak
+
+# Ignore arquivos e diretórios específicos dentro da pasta 'pipeline/p1_find'
+/pipeline/p1_find/application/*.csv
+/pipeline/p1_find/application/*.xlsx
+/pipeline/p1_find/application/*.json
+/pipeline/p1_find/application/*.db
