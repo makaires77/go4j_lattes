@@ -1,6 +1,8 @@
 package interfaces
 
-import "github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
+import (
+	"github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
+)
 
 // P1Interface define os métodos que a camada de aplicação irá chamar para interagir com a camada de interfaces.
 type P1Interface interface {
@@ -12,4 +14,7 @@ type P1Interface interface {
 
 	// GetSelectedName permite ao usuário escolher um currículo da lista de resultados.
 	GetSelectedName(results domain.SearchResults) string
+
+	// FindResearchers realiza a busca de pesquisadores utilizando os handlers e interfaces fornecidos.
+	FindResearchers(csvHandler CSVHandler, queueHandler QueueHandler, searchHandler SearchHandler, webInterface P1WebInterface) (domain.SearchResults, error)
 }

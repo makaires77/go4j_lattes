@@ -5,7 +5,6 @@ import (
 
 	"github.com/makaires77/go4j_lattes/pipeline/p1_find/application"
 	"github.com/makaires77/go4j_lattes/pipeline/p1_find/domain"
-	"github.com/makaires77/go4j_lattes/pipeline/p1_find/infra"
 	"github.com/makaires77/go4j_lattes/pipeline/p1_find/interfaces"
 
 	"github.com/stretchr/testify/assert"
@@ -26,9 +25,9 @@ func TestP1(t *testing.T) {
 	}
 
 	// Criando as instâncias dos componentes
-	csvHandler := application.NewCSVHandler()
+	csvHandler := application.NewCSVHandler("")
 	queueHandler := application.NewQueueHandler()
-	searchHandler := application.NewSearchHandler(infra.NewP1Infra())
+	searchHandler := application.NewSearchHandler()
 	webInterface := interfaces.NewP1Web()
 
 	// Testando a função FindResearchers

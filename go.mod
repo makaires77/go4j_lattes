@@ -1,4 +1,4 @@
-module go4j_lattes
+module github.com/makaires77/go4j_lattes
 
 go 1.20
 
