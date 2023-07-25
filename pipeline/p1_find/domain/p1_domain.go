@@ -1,3 +1,4 @@
+// pipeline/p1_find/domain/p1_domain.go
 package domain
 
 // SearchResult representa os dados de um resultado de busca de currículo.
