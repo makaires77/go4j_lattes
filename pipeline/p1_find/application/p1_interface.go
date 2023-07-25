@@ -1,6 +1,8 @@
+// No arquivo p1_find/application/p1_interface.go
 package application
 
-import "github.com/makaires77/go4j_lattes/pipeline/p1_find/interfacesapi"
-
-// P1Interface define os métodos que a camada de aplicação irá chamar para interagir com a camada de interfaces.
-type P1Interface = interfacesapi.P1Interface
+// Pesquisador representa um pesquisador encontrado na web
+type Researcher struct {
+	Name string
+	// Adicione outros campos que você queira para representar informações do pesquisador
+}

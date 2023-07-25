@@ -132,7 +132,8 @@
     function buscarWeb() {
       const listaNomes = document.getElementById("nomesLista");
       const nomes = Array.from(listaNomes.children).map(li => li.textContent.trim());
-      buscarNomesNaWeb(nomes);
+      const researchers = application.FindResearchers(csvHandler, queueHandler, searchHandler, webInterface);
+      console.log(researchers);
     }
   </script>
 </body>
