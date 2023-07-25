@@ -1,4 +1,4 @@
-// No arquivo p1_find/application/p1_interface.go
+// p1_find/application/p1_interface.go
 package application
 
 // Pesquisador representa um pesquisador encontrado na web
